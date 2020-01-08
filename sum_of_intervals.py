@@ -3,8 +3,8 @@ import unittest
 
 def sum_of_intervals(intervals):
     output = set()
-    for interval in intervals:
-        for i in range(interval[0], interval[1]):
+    for start, stop in intervals:
+        for i in range(start, stop):
             output.add(i)
 
     return len(output)
